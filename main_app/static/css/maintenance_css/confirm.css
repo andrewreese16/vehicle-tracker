@@ -1,0 +1,79 @@
+/* Container for the confirmation page */
+.confirmation-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Title Styling */
+.confirmation-title {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+/* Styling the confirmation form */
+.confirmation-form {
+  margin-top: 20px;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* Delete Button Styling */
+.delete-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #e74c3c;
+  color: white;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.delete-btn:hover {
+  background-color: #c0392b;
+}
+
+/* Cancel Button Styling */
+.cancel-btn {
+  font-size: 1rem;
+  color: #999;
+  text-decoration: none;
+  padding: 8px 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: border-color 0.3s ease, color 0.3s ease;
+}
+
+.cancel-btn:hover {
+  color: #3498db;
+  border-color: #3498db;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .confirmation-container {
+    padding: 20px;
+    max-width: 100%;
+  }
+
+  .delete-btn {
+    font-size: 1.1rem;
+  }
+
+  .cancel-btn {
+    font-size: 1rem;
+  }
+}

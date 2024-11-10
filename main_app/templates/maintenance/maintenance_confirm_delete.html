@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block head %}
+  <link rel="stylesheet" href="{% static 'css/maintenance_css/confirm.css' %}">
+{% endblock head %}
+  
+{% block content %}
+<div class="confirmation-container">
+  <h1 class="confirmation-title">Are you sure you want to delete the maintenance record for {{ record.name }}?</h1>
+  
+  <form method="post" class="confirmation-form">
+    {% csrf_token %}
+    <div class="form-actions">
+      <button type="submit" class="delete-btn">Yes, Delete</button>
+      <a href="{% url 'vehicle_detail' vehicle.id %}" class="cancel-btn">Cancel</a>
+    </div>
+  </form>
+</div>
+{% endblock content %}

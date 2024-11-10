@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block head %}
+  <link rel="stylesheet" href="{% static 'css/maintenance_css/maintenance_form.css' %}">
+{% endblock head %}
+  
+{% block content %}
+<div class="maintenance-record-container">
+  <h1 class="maintenance-record-title">
+    {% if record %}Edit{% else %}Create{% endif %} Maintenance Record for {{ vehicle.year }} {{ vehicle.make }} {{ vehicle.model }}
+  </h1>
+
+  <form method="post" class="maintenance-record-form">
+    {% csrf_token %}
+    <div class="form-field">
+      {{ form.as_p }}
+    </div>
+
+    <div class="form-actions">
+      <button type="submit" class="submit-btn">
+        {% if record %}Update{% else %}Create{% endif %} Maintenance Record
+      </button>
+      <a href="{% url 'vehicle_detail' vehicle.id %}" class="cancel-btn">Cancel</a>
+    </div>
+  </form>
+</div>
+{% endblock content %}

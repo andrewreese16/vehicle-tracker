@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="{% static 'css/registration_css/login.css' %}">
+</head>
+<body>
+    <div class="login-container">
+        <h2 class="login-title">Login</h2>
+        <form method="post" class="login-form">
+            {% csrf_token %}
+            <div class="form-field">
+                <label for="id_username" class="form-label">Username</label>
+                {{ form.username }}
+            </div>
+            <div class="form-field">
+                <label for="id_password" class="form-label">Password</label>
+                {{ form.password }}
+            </div>
+            <button type="submit" class="submit-btn">Login</button>
+        </form>
+        <p class="signup-link">Don't have an account? <a href="{% url 'signup' %}" class="signup-btn">Sign up</a></p>
+    </div>
+</body>
+</html>

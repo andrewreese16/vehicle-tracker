@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block head %}
+  <link rel="stylesheet" href="{% static 'css/vehicle_css/vehicle_list.css' %}">
+{% endblock head %}
+
+{% block content %}
+  <div class="vehicle-list-page">
+    <h1 class="vehicle-list-title">Your Vehicles</h1>
+    <a href="{% url 'vehicle_create' %}" class="add-vehicle-btn">Add New Vehicle</a>
+    <ul class="vehicle-list-items">
+        {% for vehicle in vehicles %}
+            <li class="vehicle-list-item">
+                <a href="{% url 'vehicle_detail' vehicle.id %}" class="vehicle-link">{{ vehicle.year }} {{ vehicle.make }} {{ vehicle.model }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+  </div>
+{% endblock content %}

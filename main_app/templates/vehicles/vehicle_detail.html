@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block head %}
+  <link rel="stylesheet" href="{% static 'css/vehicle_css/vehicle_detail.css' %}">
+{% endblock head %}
+  
+{% block content %}
+<div class="vehicle-detail-container">
+  <h1 class="vehicle-title">{{ vehicle.year }} {{ vehicle.make }} {{ vehicle.model }}</h1>
+  <p><strong>VIN:</strong> <span class="vehicle-vin">{{ vehicle.vin }}</span></p>
+
+  <h2 class="maintenance-header">Maintenance Records:</h2>
+
+  <!-- Link to create new maintenance record -->
+  <p><a href="{% url 'maintenance_create' vehicle.id %}" class="add-maintenance-link">Add Maintenance Record</a></p>
+
+  {% if maintenance_records %}
+    <ul class="maintenance-list">
+      {% for record in maintenance_records %}
+      <li class="maintenance-item">
+          <h3 class="maintenance-item-name">{{ record.name }}</h3>
+          <p><strong>Miles at time of work:</strong> {{ record.miles_at_work }}</p>
+          {% if record.product_link %}
+          <p><strong>Product Link:</strong> <a href="{{ record.product_link }}" target="_blank" class="product-link">{{ record.product_link }}</a></p>
+          {% endif %}
+          <p><strong>Part Number:</strong> {{ record.part_number }}</p>
+
+          <p><strong>Price of Work:</strong> ${{ record.price_of_work }}</p>
+          <p><strong>Notes:</strong> {{ record.notes }}</p>
+          <p><strong>Date of Service:</strong> {{ record.date_of_service|date:"F j, Y" }}</p>
+
+          <div class="maintenance-actions">
+            <a href="{% url 'maintenance_update' vehicle.id record.id %}" class="edit-link">Edit</a>
+            <a href="{% url 'maintenance_delete' vehicle.id record.id %}" class="delete-link">Delete</a>
+          </div>
+      </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p class="no-records">No maintenance records available for this vehicle.</p>
+  {% endif %}
+</div>
+{% endblock content %}

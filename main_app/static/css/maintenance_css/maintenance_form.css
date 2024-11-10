@@ -1,0 +1,108 @@
+/* Container to center the form and give it a clean layout */
+.maintenance-record-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Title Styling */
+.maintenance-record-title {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* Form Styling */
+.maintenance-record-form .form-field {
+  margin-bottom: 20px;
+}
+
+.maintenance-record-form .form-field p {
+  margin: 0;
+}
+
+/* Style for all input, select, and textarea fields */
+.maintenance-record-form input,
+.maintenance-record-form select,
+.maintenance-record-form textarea {
+  width: 100%;
+  padding: 12px;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Focus effect on inputs */
+.maintenance-record-form input:focus,
+.maintenance-record-form select:focus,
+.maintenance-record-form textarea:focus {
+  border-color: #3498db;
+  background-color: #fff;
+  outline: none;
+}
+
+/* Submit Button Styling */
+.submit-btn {
+  width: 100%;
+  padding: 15px;
+  background-color: #3498db;
+  color: white;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #2980b9;
+}
+
+/* Cancel Button Styling */
+.cancel-btn {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #999;
+  text-decoration: none;
+  padding: 8px 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: border-color 0.3s ease, color 0.3s ease;
+}
+
+.cancel-btn:hover {
+  color: #3498db;
+  border-color: #3498db;
+}
+
+/* Form Action Styling (submit and cancel buttons) */
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .maintenance-record-container {
+    padding: 20px;
+    max-width: 100%;
+  }
+
+  .submit-btn {
+    font-size: 1.1rem;
+  }
+
+  .cancel-btn {
+    font-size: 1rem;
+  }
+}

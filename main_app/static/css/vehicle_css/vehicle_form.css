@@ -1,0 +1,73 @@
+/* Container to center the form and add modern layout */
+.create-vehicle-container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Title Styling */
+.create-vehicle-title {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* Form Field Styling */
+.create-vehicle-form .form-field {
+  margin-bottom: 20px;
+}
+
+.create-vehicle-form .form-field p {
+  margin: 0;
+}
+
+.create-vehicle-form input,
+.create-vehicle-form select,
+.create-vehicle-form textarea {
+  width: 100%;
+  padding: 12px;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Focus effect on inputs */
+.create-vehicle-form input:focus,
+.create-vehicle-form select:focus,
+.create-vehicle-form textarea:focus {
+  border-color: #3498db;
+  background-color: #fff;
+  outline: none;
+}
+
+/* Submit Button Styling */
+.save-vehicle-btn {
+  width: 100%;
+  padding: 15px;
+  background-color: #3498db;
+  color: white;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.save-vehicle-btn:hover {
+  background-color: #2980b9;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .create-vehicle-container {
+    padding: 20px;
+    max-width: 100%;
+  }
+}

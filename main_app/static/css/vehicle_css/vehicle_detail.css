@@ -1,0 +1,106 @@
+
+.vehicle-title {
+  font-size: 2.5rem !important;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+
+.maintenance-header {
+  font-size: 1.8rem;
+  margin-top: 30px;
+  color: #3498db;
+}
+
+.add-maintenance-link {
+  display: inline-block;
+  background-color: #3498db;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.add-maintenance-link:hover {
+  background-color: #2980b9;
+}
+
+.maintenance-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.maintenance-item {
+  background-color: white;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.maintenance-item-name {
+  font-size: 1.6rem;
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+.maintenance-item p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.product-link {
+  color: #3498db;
+}
+
+.product-link:hover {
+  text-decoration: underline;
+}
+
+.maintenance-actions {
+  margin-top: 20px;
+}
+
+.edit-link,
+.delete-link {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: #3498db;
+  margin-right: 15px;
+  transition: color 0.3s ease;
+}
+
+.edit-link:hover,
+.delete-link:hover {
+  color: #2980b9;
+}
+
+.no-records {
+  font-size: 1.2rem;
+  color: #777;
+  font-style: italic;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .vehicle-title {
+    font-size: 2rem;
+  }
+
+  .maintenance-header {
+    font-size: 1.5rem;
+  }
+
+  .maintenance-item {
+    padding: 15px;
+  }
+
+  .add-maintenance-link {
+    font-size: 14px;
+    padding: 8px 15px;
+  }
+}

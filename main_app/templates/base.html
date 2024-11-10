@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>
+    {% block title %}
+      My Vehicle Tracker
+    {% endblock title %}
+  </title>
+  <link rel="stylesheet" href="{% static 'css/base.css' %}">
+  {% block head %}
+  {% endblock head %}
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <div class="brand">My Vehicle Tracker</div>
+      <ul class="nav-links">
+        <li><a class="nav-link" href="{% url 'vehicle_list' %}">Home</a></li>
+        
+        {% if user.is_authenticated %}
+          <!-- Logged-in user can access logout -->
+          <form class="logout-form" method="post" action="{% url 'logout' %}">
+            {% csrf_token %}
+            <button type="submit" class="logout-btn">Log Out</button>
+          </form>
+        {% else %}
+          <!-- Guest users can access SignIn and SignUp -->
+          <li><a class="nav-link" href="{% url 'login' %}">Sign In</a></li>
+          <li><a class="nav-link" href="{% url 'signup' %}">Sign Up</a></li>
+        {% endif %}
+      </ul>
+    </div>
+  </nav>
+
+  <hr class="divider">
+
+  <!-- Page-specific content -->
+  {% block content %}
+  {% endblock content %}
+
+</body>
+</html>

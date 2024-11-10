@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block head %}
+  <link rel="stylesheet" href="{% static 'css/vehicle_css/vehicle_form.css' %}">
+{% endblock head %}
+  
+{% block content %}
+<div class="create-vehicle-container">
+  <h2 class="create-vehicle-title">Create a New Vehicle</h2>
+
+  <form method="POST" class="create-vehicle-form">
+    {% csrf_token %}
+    <div class="form-fields">
+      {{ form.as_p }}  <!-- This will render the form fields as <p> elements -->
+    </div>
+    <button type="submit" class="save-vehicle-btn">Save Vehicle</button>
+  </form>
+</div>
+{% endblock content %}
