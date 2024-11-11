@@ -7,6 +7,7 @@ from django.utils import timezone
 from django.contrib.auth.forms import UserCreationForm
 from django.views.generic import CreateView
 from django.urls import reverse_lazy
+from django.contrib import messages
 
 
 class SignUpView(CreateView):
@@ -14,6 +15,16 @@ class SignUpView(CreateView):
     template_name = 'registration/signup.html'
     success_url = reverse_lazy('login')
 
+    def form_valid(self, form):
+        # Save the user and add a success message with session-based storage
+        response = super().form_valid(form)
+        messages.success(self.request, 'Account created successfully! You can now log in.', extra_tags='success', fail_silently=False)
+        return response
+
+    def form_invalid(self, form):
+        # Add an error message if the form is invalid
+        messages.error(self.request, 'There were errors in your submission. Please correct them and try again.')
+        return super().form_invalid(form)
 @login_required
 def vehicle_list(request):
     vehicles = Vehicle.objects.filter(user=request.user)

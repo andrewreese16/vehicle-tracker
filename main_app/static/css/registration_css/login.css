@@ -1,4 +1,3 @@
-/* Base styling for the login page */
 body {
   font-family: 'Arial', sans-serif;
   background-color: #f4f7fc;
@@ -10,7 +9,6 @@ body {
   height: 100vh;
 }
 
-/* Container for the login form */
 .login-container {
   background-color: white;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -21,7 +19,6 @@ body {
   text-align: center;
 }
 
-/* Title for the form */
 .login-title {
   font-size: 24px;
   font-weight: 600;
@@ -29,14 +26,12 @@ body {
   margin-bottom: 20px;
 }
 
-/* Form styling */
 .login-form {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-/* Styling for form fields */
 .form-field {
   display: flex;
   flex-direction: column;
@@ -49,7 +44,6 @@ body {
   margin-bottom: 6px;
 }
 
-/* Input field styles */
 input[type="text"],
 input[type="password"] {
   padding: 12px;
@@ -67,7 +61,6 @@ input[type="password"]:focus {
   outline: none;
 }
 
-/* Button styling */
 .submit-btn {
   background-color: #007BFF;
   color: white;
@@ -83,7 +76,6 @@ input[type="password"]:focus {
   background-color: #0056b3;
 }
 
-/* Link to sign up */
 .signup-link {
   font-size: 14px;
   color: #555;

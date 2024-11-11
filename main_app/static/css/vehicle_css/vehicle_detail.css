@@ -1,11 +1,14 @@
+.vehicle-detail-container {
+  width: 90%;
+  margin: 0 auto;
+}
 
 .vehicle-title {
-  font-size: 2.5rem !important;
+  font-size: 2.5rem;
   color: #2c3e50;
   margin-bottom: 20px;
   font-weight: 600;
 }
-
 
 .maintenance-header {
   font-size: 1.8rem;
@@ -21,71 +24,55 @@
   padding: 10px 20px;
   font-size: 16px;
   border-radius: 5px;
-  margin-top: 10px;
-  transition: background-color 0.3s ease;
-}
-
-.add-maintenance-link:hover {
-  background-color: #2980b9;
-}
-
-.maintenance-list {
-  list-style-type: none;
-  padding: 0;
-}
-
-.maintenance-item {
-  background-color: white;
   margin-bottom: 20px;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.maintenance-item-name {
-  font-size: 1.6rem;
-  color: #2c3e50;
-  font-weight: 600;
+.maintenance-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-size: 1rem;
+  color: #333;
 }
 
-.maintenance-item p {
-  font-size: 1.1rem;
-  color: #555;
+.maintenance-table th,
+.maintenance-table td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: left;
 }
 
-.product-link {
+.maintenance-table th {
+  background-color: #f4f4f4;
+  color: #333;
+  font-weight: bold;
+}
+
+.maintenance-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.maintenance-table a {
   color: #3498db;
+  text-decoration: none;
 }
 
-.product-link:hover {
+.maintenance-table a:hover {
   text-decoration: underline;
 }
 
-.maintenance-actions {
-  margin-top: 20px;
-}
-
-.edit-link,
-.delete-link {
-  text-decoration: none;
-  font-size: 1.2rem;
+.edit-link, .delete-link {
+  font-size: 0.9rem;
   color: #3498db;
-  margin-right: 15px;
-  transition: color 0.3s ease;
-}
-
-.edit-link:hover,
-.delete-link:hover {
-  color: #2980b9;
 }
 
 .no-records {
   font-size: 1.2rem;
   color: #777;
   font-style: italic;
+  margin-top: 20px;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .vehicle-title {
     font-size: 2rem;
@@ -95,8 +82,9 @@
     font-size: 1.5rem;
   }
 
-  .maintenance-item {
-    padding: 15px;
+  .maintenance-table th, .maintenance-table td {
+    padding: 8px;
+    font-size: 0.9rem;
   }
 
   .add-maintenance-link {

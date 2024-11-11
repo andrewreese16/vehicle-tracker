@@ -1,57 +1,52 @@
-/* Navbar Styling */
 .navbar {
-  background-color: #2c3e50; /* Darker, more refined background */
+  background-color: #2c3e50;
   color: #ecf0f1;
   padding: 15px 20px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Slightly more pronounced shadow */
-  border-bottom: 1px solid #34495e; /* Adds a clean, subtle bottom border */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid #34495e;
+  width: 100%;
 }
 
-/* Navbar Container */
 .navbar-container {
   display: flex;
   justify-content: space-between;
-  align-items: center; /* Ensures vertical alignment of items */
-  flex-wrap: wrap; /* Ensures elements wrap nicely on small screens */
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
-/* Brand */
 .brand {
   font-size: 1.8rem;
-  font-weight: 600; /* Slightly less bold for modern look */
+  font-weight: 600;
   color: #ecf0f1;
   letter-spacing: 1px;
-  flex-grow: 1; /* Ensures brand name takes up available space */
+  flex-grow: 1;
 }
 
-/* Navbar Links */
 .nav-links {
   list-style-type: none;
   display: flex;
-  gap: 20px; /* Slightly more space between links */
-  align-items: center; /* Align nav links vertically with brand and logout button */
+  gap: 20px;
+  align-items: center;
 }
 
-/* Navbar Link Styling */
 .nav-link {
   font-size: 1.1rem;
   color: #ecf0f1;
   text-decoration: none;
-  font-weight: 500; /* Lighter font weight */
-  transition: color 0.3s ease, transform 0.3s ease; /* Added transform for hover effect */
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
-/* Hover Effects for Links */
 .nav-link:hover {
-  color: #3498db; /* Blue on hover */
-  transform: translateY(-2px); /* Slight lift effect on hover */
+  color: #3498db;
+  transform: translateY(-2px);
 }
 
-/* Logout Button Styling */
 .logout-form {
   margin: 0;
   display: flex;
-  align-items: center; /* Center the logout button in the flex container */
+  align-items: center;
 }
 
 .logout-btn {
@@ -59,65 +54,60 @@
   color: white;
   font-size: 1.1rem;
   padding: 10px 20px;
-  border-radius: 30px; /* Rounded, pill-like button */
+  border-radius: 30px;
   border: none;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
-  width: auto; /* Let the button size adjust based on its content */
-  max-width: 220px; /* Limit the width on larger screens */
-  margin-left: 10px; /* Adds a little space between button and other navbar items */
+  max-width: 220px;
+  margin-left: 10px;
+  margin-right: 20px;
 }
 
 .logout-btn:hover {
   background-color: #c0392b;
-  transform: translateY(-2px); /* Slight lift effect on hover */
+  transform: translateY(-2px);
 }
 
-/* Divider between navbar and content */
 .divider {
   margin-top: 20px;
   border: 0;
   border-top: 2px solid #bdc3c7;
   width: 100%;
-  opacity: 0.3; /* More subtle divider */
+  opacity: 0.3;
 }
 
-/* Mobile Responsiveness */
 @media (max-width: 768px) {
-  /* Navbar layout changes for mobile */
   .navbar-container {
-    flex-direction: column; /* Stack elements vertically */
-    align-items: center; /* Center elements */
-    gap: 20px; /* Space between elements */
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
   }
 
-  /* Nav links behavior */
   .nav-links {
     flex-direction: column;
-    gap: 15px; /* Increased space between links on mobile */
-    width: 100%; /* Make links full width */
-    margin-top: 10px; /* Adds margin at the top for spacing */
+    gap: 15px;
+    width: 100%;
+    align-items: center;
+    margin-top: 10px;
   }
 
-  /* Adjust brand font size */
   .brand {
     font-size: 1.5rem;
-    text-align: center; /* Center the brand name on mobile */
+    text-align: center;
+    width: 100%;
   }
 
-  /* Adjust logout button on mobile */
   .logout-btn {
     font-size: 1.1rem;
     padding: 10px 20px;
-    width: auto; /* Let the button stay natural size */
-    max-width: 220px; /* Keep the width controlled */
-    margin-top: 10px; /* Space around the button */
+    margin-top: 10px;
+    width: auto;
+    max-width: 220px;
   }
 
-  /* Prevent logout button from wrapping into two lines */
   .logout-btn {
-    white-space: nowrap; /* Ensures the text doesn't break into multiple lines */
-    text-overflow: ellipsis; /* Adds ellipsis if text is too long for the button */
-    overflow: hidden; /* Prevents overflowing content */
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
   }
 }

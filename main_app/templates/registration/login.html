@@ -10,6 +10,14 @@
 <body>
     <div class="login-container">
         <h2 class="login-title">Login</h2>
+        {% if messages %}
+            <div class="messages">
+                {% for message in messages %}
+                    <div class="message {{ message.tags }}">{{ message }}</div>
+                {% endfor %}
+            </div>
+        {% endif %}
+
         <form method="post" class="login-form">
             {% csrf_token %}
             <div class="form-field">
