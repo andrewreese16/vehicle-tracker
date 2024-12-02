@@ -12,7 +12,6 @@
 
   <h2 class="maintenance-header">Maintenance Records</h2>
   <p><a href="{% url 'maintenance_create' vehicle.id %}" class="add-maintenance-link">Add Maintenance Record</a></p>
-
   {% if maintenance_records %}
     <table class="maintenance-table">
       <thead>
@@ -48,5 +47,6 @@
   {% else %}
     <p class="no-records">No maintenance records available for this vehicle.</p>
   {% endif %}
+  <p><a href="{% url 'home' %}" class="add-maintenance-link">Back to Vehicles</a></p>
 </div>
 {% endblock content %}
