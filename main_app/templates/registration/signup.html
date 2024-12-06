@@ -30,6 +30,7 @@
             </div>
 
             <div class="form-field">
+                <p>Password must be atleast 8 characters long and must not be all numbers.</p>
                 <label for="id_password1" class="form-label">Password</label>
                 {{ form.password1 }}
                 {% if form.password1.errors %}
